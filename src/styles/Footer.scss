@@ -3,5 +3,10 @@
 footer {
   .footer {
     background-color: $footer-gray;
+    height: 200px;
+    .footer__text {
+      display: flex;
+      justify-content: center;
+    }
   }
 }

@@ -5,17 +5,21 @@
   background-color: $header-blue;
   overflow: hidden;
   .header__left {
-    align-items: center;
-    justify-content: center;
+    .header__left__logo {
+      margin-top: 30px;
+    }
   }
   .header__right {
+    padding-top: 10px;
     form {
       label {
         margin: 0 10px;
       }
-      button {
-        margin-top: 5px;
-        margin-bottom: 0;
+      .login {
+        margin-top: 9px;
+
+        align-items: center;
+        justify-content: center;
       }
     }
   }

@@ -1,0 +1,14 @@
+@import "_colors";
+
+.homeLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .homeLogo__logo {
+    img.logo {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
