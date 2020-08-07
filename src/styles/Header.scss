@@ -1,0 +1,22 @@
+@import "_colors.scss";
+@use "form.scss";
+
+.header {
+  background-color: $header-blue;
+  overflow: hidden;
+  .header__left {
+    align-items: center;
+    justify-content: center;
+  }
+  .header__right {
+    form {
+      label {
+        margin: 0 10px;
+      }
+      button {
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
