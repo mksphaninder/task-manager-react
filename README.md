@@ -37,32 +37,30 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Tasks
+- [ ] create a front page that has both login and registration simular to FB. (08-08)
+  - [ ] Validation alerts should be shown there itself
+  - [ ] Should contain the following components:-
+    - [ ] Header (08-07)
+    - [ ] Footer (08-07)
+    - [ ] Login Form (08-07)
+    - [ ] Registration Form (08-07)
+    - [ ] An image (08-07)
+- once logged in successfully
+  - [ ] Header with no login form but with logout button
+  - [ ] Sidebar
+    - [ ] projects
+  - [ ] Boards
+    - [ ] There should 3 (or how many ever tasktypes are present).
+    - [ ] Card
+      - [ ] Text area
+      - [ ] Date.
+      - [ ] Ok button.
+      - [ ] The cards should be dragable accross the boards.
+      - [ ] Edit button.
+      - [ ] Delete button.
+ - [ ] 404 page
+  - [ ] Should be funny! =D 
+- [ ] Use React Hooks.
+- [ ] Use Context API.
+- [ ] Use Redux if necessary.
