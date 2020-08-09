@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LoginService from "./LoginService";
 import { useHistory } from "react-router-dom";
+import Alert from "./Alert";
 
 function LoginForm(props) {
   const [username, setusername] = useState("");
   const [password, setpassword] = useState("");
+  const [alert, setalert] = useState(false);
   let history = useHistory();
 
   const handleLoginClicked = (event) => {
@@ -21,14 +23,19 @@ function LoginForm(props) {
         }
 
         localStorage.setItem("tm-user", JSON.stringify(response.data));
+        setalert(false);
         props.doLogin();
         history.push("/user-projects");
       })
-      .catch((err) => console.log("here", err));
+      .catch((err) => {
+        console.log(err);
+        setalert(true);
+      });
   };
 
   return (
     <div>
+      {alert && <Alert message={"Invalid username or password"} />}
       <form className="form-inline my-2 my-lg-0" onSubmit={handleLoginClicked}>
         <input
           className="form-control mr-sm-2"
