@@ -63,4 +63,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
   - [ ] Should be funny! =D 
 - [ ] Use React Hooks.
 - [ ] Use Context API.
-- [ ] Use Redux if necessary.
+
+- [ ] Use Redux for state managing.
