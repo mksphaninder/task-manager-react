@@ -1,38 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/Header.scss";
 import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
+import LoginForm from "./LoginForm";
+import Logout from "./Logout";
+import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ isLoggedin, doLogout, doLogin }) {
   return (
     <div className="header">
       {/* should contain logo on the left side. */}
       {/* should contain login form on the right */}
       <nav className="navbar navbar-dark bg-dark">
         <nav className="navbar navbar-expand-lg ">
-          <a href="#">
+          <Link to="/">
             <AssignmentTurnedInIcon />
-          </a>
+          </Link>
         </nav>
-        <form className="form-inline my-2 my-lg-0">
-          <input
-            className="form-control mr-sm-2"
-            type="text"
-            placeholder="username"
-            aria-label="username"
-          />
-          <input
-            className="form-control mr-sm-2"
-            type="password"
-            placeholder="password"
-            aria-label="username"
-          />
-          <button
-            className="btn btn-outline-success my-2 my-sm-0"
-            type="submit"
-          >
-            Login
-          </button>
-        </form>
+        {(isLoggedin && <Logout doLogout={doLogout} />) || (
+          <LoginForm doLogin={doLogin} />
+        )}
       </nav>
     </div>
   );
