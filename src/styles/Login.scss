@@ -1,0 +1,9 @@
+@import "./colors";
+.login {
+  .login__form {
+    margin: 30px 0;
+    border: 1px solid $footer-gray;
+    padding: 30px;
+    background-color: $footer-gray;
+  }
+}

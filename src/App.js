@@ -1,25 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./styles/App.scss";
+import Header from "./partial-components/Header";
+import Footer from "./partial-components/Footer";
+import UserProjects from "./view-components/UserProjects";
+import ErrorPage from "./view-components/ErrorPage";
+import { LoginProvider } from "./context/LoginContext";
+import Login from "./view-components/Login";
+import Register from "./view-components/Register";
+import Home from "./view-components/Home";
+import ProtectedRoute from "./partial-components/RouteComponents/ProtectedRoute";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <LoginProvider>
+        <Header />
+
+        <Switch>
+          <Route exact path="/login" component={Login} />
+          {/* <Route exact path="/user-projects">
+            <UserProjects />
+          </Route> */}
+          <ProtectedRoute
+            exact
+            path="/user-projects"
+            component={UserProjects}
+          />
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+          <Route component={ErrorPage} />
+        </Switch>
+
+        <Footer />
+      </LoginProvider>
+    </Router>
   );
 }
 
