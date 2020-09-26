@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/HomeLogo.scss";
+import "../styles/HomeLogo.scss";
 
 function HomeLogo() {
   return (
