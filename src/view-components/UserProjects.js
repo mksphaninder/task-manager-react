@@ -14,9 +14,9 @@ function UserProjects() {
   });
 
   useEffect(() => {
-    getProject(loginData.userId, loginData.token)
+    console.log(loginData.token);
+    getProject(loginData?.userId, loginData?.token)
       .then((response) => {
-        console.log(response.data);
         setProjects({
           ...projects,
           projectsList: response.data,
