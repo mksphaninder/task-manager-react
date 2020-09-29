@@ -1,5 +1,6 @@
 export function getJwtAndUserId() {
-  const localToken = JSON.parse(localStorage.getItem("tm-user")) || {
+  const userDetails = localStorage.getItem("tm-user");
+  const localToken = JSON.parse(userDetails) || {
     token: null,
     userId: null,
   };

@@ -45,7 +45,6 @@ function LoginForm() {
           setLoginData({
             ...loginData,
             isLoggedIn: true,
-            token: JSON.stringify(response.data.token),
             userId: response.data.userId,
           });
           setAlert(false);
