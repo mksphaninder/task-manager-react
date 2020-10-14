@@ -26,12 +26,15 @@ export function getProject(userId, token) {
 /**
  * Will return the tasks for the project
  * @param {*} userId
+ * The id for the user
  * @param {*} projectId
+ * The id of the project
  * @param {*} token
+ * The jwt security token
  */
 export function getTasks(userId, projectId, token) {
   return Axios.get(
-    `http://localhost:5050/auth/users/${userId}/projects/${projectId}`,
+    `http://localhost:5050/users/${userId}/projects/${projectId}/tasks`,
     {
       headers: {
         Authorization: `bearer ${token}`,

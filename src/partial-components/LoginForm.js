@@ -45,6 +45,7 @@ function LoginForm() {
           setLoginData({
             ...loginData,
             isLoggedIn: true,
+            token: JSON.parse(localStorage.getItem("tm-user")).token,
             userId: response.data.userId,
           });
           setAlert(false);
@@ -54,7 +55,7 @@ function LoginForm() {
         .catch((err) => {
           setLoginData({
             isLoggedIn: false,
-            jwt: undefined,
+            token: undefined,
             userId: undefined,
           });
           setAlert(true);

@@ -62,3 +62,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 # Bug list
 
 - The projects list is not loading because of invalid token. but shows when you reload the page.
+- Add the add project button.

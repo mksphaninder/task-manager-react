@@ -10,6 +10,7 @@ import Login from "./view-components/Login";
 import Register from "./view-components/Register";
 import Home from "./view-components/Home";
 import ProtectedRoute from "./partial-components/RouteComponents/ProtectedRoute";
+import ProjectTasks from "./view-components/ProjectTasks";
 
 function App() {
   return (
@@ -26,6 +27,11 @@ function App() {
             exact
             path="/user-projects"
             component={UserProjects}
+          />
+          <ProtectedRoute
+            exact
+            path="/user-projects/:projectId"
+            component={ProjectTasks}
           />
           <Route path="/register">
             <Register />

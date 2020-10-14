@@ -18,7 +18,6 @@ function UserProjects() {
   });
 
   useEffect(() => {
-    console.log("use effect login data", loginData);
     getProject(userId, token)
       .then((response) => {
         setProjects({
